@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Виктория Касаковская](https://up.htmlacademy.ru/adaptive/14/user/238370).
-* Наставник: `Неизвестно`.
+* Наставник: Без наставника.
 
 ---
 
