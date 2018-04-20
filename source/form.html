@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-nav">
+        <a class="main-nav__logo">
+          <img class="main-nav__logo-image" src="" alt="">
+        </a>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link" href="">Главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <h1 class="page-header__title">Конкурс на самое безшабашное путешествие с Пинк</h1>
+    </header>
+
+    <main class="page-main">
+      <section class="page-main__form">
+        <h2 class="visually-hidden">Форма участия в конкурсе</h2>
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="form__slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+
+          <fieldset class="form__fieldset  user-name">
+            <ul class="user-name__list">
+              <li class="user-name__item">
+                <label class="user-name__label  label-caption" for="surname">Фамилия:</label>
+                <input class="user-name__input  text-input" id="surname" type="text" placeholder="Укажите фамилию *" required>
+              </li>
+              <li class="user-name__item">
+                <label class="user-name__label  label-caption" for="name">Имя:</label>
+                <input class="user-name__input  text-input" id="name" type="text" placeholder="Введите ваше имя *" required>
+              </li>
+              <li class="user-name__item">
+                <label class="user-name__label  label-caption" for="patronymic">Отчество:</label>
+                <input class="user-name__input  text-input" id="patronymic" type="text" placeholder="Ну и отчество тоже">
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form__fieldset  achievements">
+            <legend class="achievements__legend">Ваши безбашенные достижения в путешествии</legend>
+            <ul class="achievements__list">
+              <li class="achievements__item">
+                <input class="achievements__checkbox" id="selfie" type="checkbox" checked>
+                <label class="achievements__label  label" for="selfie">Сделал селфи с акулой</label>
+              </li>
+              <li class="achievements__item">
+                <input class="achievements__checkbox" id="beach" type="checkbox" checked>
+                <label class="achievements__label  label" for="beach">Обгорел на пляже</label>
+              </li>
+              <li class="achievements__item">
+                <input class="achievements__checkbox" id="norris" type="checkbox">
+                <label class="achievements__label  label" for="norris">Видел Чака Норриса</label>
+              </li>
+              <li class="achievements__item">
+                <input class="achievements__checkbox" id="souvenir" type="checkbox">
+                <label class="achievements__label  label" for="souvenir">Накупил сувениров</label>
+              </li>
+              <li class="achievements__item">
+                <input class="achievements__checkbox" id="tower" type="checkbox" checked>
+                <label class="achievements__label  label" for="tower">Удержал башню</label>
+              </li>
+              <li class="achievements__item">
+                <input class="achievements__checkbox" id="hotel" type="checkbox">
+                <label class="achievements__label  label" for="hotel">Разгромил отель</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form__fieldset  contacts">
+            <ul class="contacts__list">
+              <li class="feedback__item">
+                <label class="contacts__label label-caption" for="phone-number">Номер телефона</label>
+                <input class="contucts__tel  text-input" id="phone-number" name="phone-number" type="tel" placeholder="Номер, пожалуйста">
+              </li>
+              <li class="contacts__item">
+                <label class="contacts__label label-caption" for="email">Адрес почты</label>
+                <input class="contucts__tel  text-input" id="email" name="email" type="email" placeholder="Введите почту *" required>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form__fieldset  app">
+            <legend class="app__legend">С каким приложением путешествовали?</legend>
+            <ul class="app__list">
+              <li class="app__item">
+                <input class="app__radio" type="radio" name="app" id="ios" value="ios" checked>
+                <label class="app__label  label" for="ios">Pink для iOS</label>
+              </li>
+              <li class="app__item">
+                <input class="app__radio" type="radio" name="app" id="android" value="android">
+                <label class="app__label  label" for="android">Pink на Android</label>
+              </li>
+              <li class="app__item">
+                <input class="app__radio" type="radio" name="app" id="windows" value="windows">
+                <label class="app__label  label" for="windows">Windows Phone</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form__fieldset  feeling">
+            <legend class="feeling__legend">Опишите свои эмоции</legend>
+            <textarea class="feeling__textarea" name="user-emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </fieldset>
+
+            <input class="form__button  form-button" type="submit" value="Отправить форму">
+
+            <p class="form__require">* — обязательные поля</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <a class="page-footer__logo  logo" href="#">
+        <img class="logo__image" src="" alt="">
+      </a>
+
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твиттер</span></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбук</span></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Мы на Ютьюб</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано:</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+      </div>
+    </footer>
+
+    <section class="pop-up pop-up--success">
+      <div class="pop-up__wrapper">
+        <h4 class="pop-up__title">Ваша заявка отправлена</h4>
+        <p class="pop-up__content">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+        <div class="pop-up__button-wrapper">
+          <button class="pop-up__button  form-button">Закрыть окно</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="pop-up pop-up--failure">
+      <div class="pop-up__wrapper">
+        <h4 class="pop-up__title">Что-то пошло не так!</h4>
+        <p class="pop-up__content">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="pop-up__button  form-button">ОК</button>
+      </div>
+    </section>
+  </body>
+</html>
