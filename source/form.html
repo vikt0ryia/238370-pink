@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -77,15 +78,15 @@
             </ul>
           </fieldset>
 
-          <fieldset class="form__fieldset  contacts">
-            <ul class="contacts__list">
-              <li class="feedback__item">
-                <label class="contacts__label label-caption" for="phone-number">Номер телефона</label>
-                <input class="contucts__tel  text-input" id="phone-number" name="phone-number" type="tel" placeholder="Номер, пожалуйста">
+          <fieldset class="form__fieldset  contacts-form">
+            <ul class="contacts-form__list">
+              <li class="contacts-form__item">
+                <label class="contacts-form__label label-caption" for="phone-number">Номер телефона</label>
+                <input class="contacts-form__tel  text-input" id="phone-number" name="phone-number" type="tel" placeholder="Номер, пожалуйста">
               </li>
-              <li class="contacts__item">
-                <label class="contacts__label label-caption" for="email">Адрес почты</label>
-                <input class="contucts__tel  text-input" id="email" name="email" type="email" placeholder="Введите почту *" required>
+              <li class="contacts-form__item">
+                <label class="contacts-form__label label-caption" for="email">Адрес почты</label>
+                <input class="contacts-form__tel  text-input" id="email" name="email" type="email" placeholder="Введите почту *" required>
               </li>
             </ul>
           </fieldset>
@@ -147,7 +148,7 @@
 
     <section class="pop-up pop-up--success">
       <div class="pop-up__wrapper">
-        <h4 class="pop-up__title">Ваша заявка отправлена</h4>
+        <h3 class="pop-up__title">Ваша заявка отправлена</h3>
         <p class="pop-up__content">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
         <div class="pop-up__button-wrapper">
           <button class="pop-up__button  form-button">Закрыть окно</button>
@@ -157,7 +158,7 @@
 
     <section class="pop-up pop-up--failure">
       <div class="pop-up__wrapper">
-        <h4 class="pop-up__title">Что-то пошло не так!</h4>
+        <h3 class="pop-up__title">Что-то пошло не так!</h3>
         <p class="pop-up__content">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         <button class="pop-up__button  form-button">ОК</button>
       </div>
