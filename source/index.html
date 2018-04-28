@@ -3,39 +3,52 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav">
-        <a class="main-nav__logo">
-          <img class="main-nav__logo-image" src="" alt="">
-        </a>
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <nav class="main-nav  main-nav--opened  main-nav--nojs">
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__link" href="">Главная</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
-          </ul>
+          <a class="main-nav__logo">
+            <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" alt="" >
+          </a>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__link" href="">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+        </ul>
       </nav>
-
-      <h1 class="visually-hidden">Сайт приложения PINK</h1>
-
-      <section class="page-header__download  download-app">
-        <a class="download-app__button  button" href="#">Скачать приложение</a>
-        <div class="download-app__icons-wrapper">
-          <a href="#" class="download-app__icon  download-app__icon--apple"><span class="visually-hidden">Приложение для Apple</span></a>
-          <a href="#" class="download-app__icon  download-app__icon--android"><span class="visually-hidden">Приложение для Android</span></a>
-          <a href="#" class="download-app__icon  download-app__icon--windows"><span class="visually-hidden">Приложение для Windows</span></a>
-        </div>
-        <p class="download-app__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-      </section>
     </header>
 
     <main class="page-main">
+
+      <section class="page-title">
+        <div class="page-title__wrapper">
+          <h1 class="visually-hidden">Сайт приложения PINK</h1>
+        </div>
+      </section>
+
+      <section class="download">
+        <h2 class="visually-hidden">Скачать приложение</h2>
+        <div class="download__wrapper">
+          <section class="download-app">
+            <div class="download-app__wrapper">
+              <p class="download-app__slogan">Взгляните на жизнь ярче!</p>
+              <a class="download-app__button  button" href="#">Скачать приложение</a>
+              <div class="download-app__icons-wrapper">
+                <a href="#" class="download-app__icon  download-app__icon--apple"><span class="visually-hidden">Приложение для Apple</span></a>
+                <a href="#" class="download-app__icon  download-app__icon--android"><span class="visually-hidden">Приложение для Android</span></a>
+                <a href="#" class="download-app__icon  download-app__icon--windows"><span class="visually-hidden">Приложение для Windows</span></a>
+              </div>
+              <p class="download-app__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+            </div>
+          </section>
+        </div>
+      </section>
 
       <section class="features">
         <h2 class="visually-hidden">Характеристики приложения</h2>
@@ -149,6 +162,23 @@
     <section class="map"></section>
 
     </main>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
 
   </body>
 </html>
