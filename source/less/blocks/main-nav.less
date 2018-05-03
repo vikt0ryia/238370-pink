@@ -9,21 +9,86 @@
 
 .main-nav__wrapper {
   display: flex;
+  align-items: center;
+}
+
+.main-nav__logo {
+  margin-top: 3px;
+  margin-left: 21px;
 }
 
 .main-nav__toggle {
-  width: 70px;
+  position: relative;
+
+  width: 90px;
   height: 65px;
   margin-left: auto;
 
-  background-color: #6a4d38;
+  background-color: transparent;
 
   cursor: pointer;
   border: none;
+}
 
-  &:hover,
-  &:active {
-    background-color: #624530;
+.main-nav--closed .main-nav__toggle {
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    width: 50px;
+    height: 4px;
+
+    background-color: #ffffff;
+    box-shadow: 0 10px 0 0 #ffffff, 0 20px 0 0 #ffffff;
+  }
+
+  &:hover::before {
+    background-color: #d22856;
+    box-shadow: 0 10px 0 0 #d22856, 0 20px 0 0 #d22856;
+  }
+
+  &:active::before {
+    background-color: rgba(210, 40, 86, 0.3);
+    box-shadow: 0 10px 0 0 rgba(210, 40, 86, 0.3), 0 20px 0 0 rgba(210, 40, 86, 0.3);
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 30px;
+    right: 15px;
+
+    width: 30px;
+    height: 5px;
+
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: #d22856;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba(210, 40, 86, 0.3);
   }
 }
 
@@ -68,10 +133,7 @@
   }
 }
 
-
-
-
-@media (max-width: @mobile-width-only) {
+@media (max-width: @drop-menu-width) {
 
   .main-nav--closed .main-nav__list {
     display: none;
@@ -86,15 +148,54 @@
   }
 
   .main-nav--opened .main-nav__list {
-    display: static;
+    display: block;
 
     border-top: 1px solid #000000;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    background-color: @bg-darkgrey;
+    height: 69px;
   }
 
   .main-nav--nojs .main-nav__toggle {
     display: none;
   }
 
+  .main-nav--nojs .main-nav__list {
+    display: block;
 
+    border-top: 1px solid #000000;
+  }
+}
 
+@media (min-width: @tablet-width) {
+
+  .main-nav__wrapper {
+    height: 110px;
+  }
+
+  .main-nav__logo {
+    margin-top: -6px;
+  }
+
+  .main-nav__logo-image {
+    width: 146.3px;
+    height: 40.375px;
+  }
+
+  @media (max-width: @drop-menu-width) {
+
+    .main-nav--opened .main-nav__wrapper {
+      height: 109px;
+    }
+
+    .main-nav--nojs .main-nav__wrapper {
+      height: 109px;
+    }
+
+    .main-nav--opened .main-nav__toggle {
+      margin-top: 5px;
+    }
+  }
 }
