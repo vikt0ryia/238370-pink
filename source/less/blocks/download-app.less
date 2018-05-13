@@ -1,0 +1,137 @@
+.download-app {
+  background-color: @bg-header;
+}
+
+.download-app__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-bottom: 30px;
+}
+
+.download-app__slogan {
+  font-size: 0;
+}
+
+.download-app__button {
+  width: 100%;
+  margin-bottom: 30px;
+
+  &:hover {
+    color: @pink;
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
+}
+
+.download-app__icons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  padding-left: 32px;
+  margin-bottom: 20px;
+}
+
+.download-app__icon {
+  display: block;
+  width: 60px;
+  height: 60px;
+
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  &--apple {
+    background-image: url("../img/logo-apple.svg");
+  }
+
+  &--android {
+    background-image: url("../img/logo-android.svg");
+  }
+
+  &--windows {
+    background-image: url("../img/logo-microsoft.svg");
+    background-position: center bottom 3px;
+  }
+}
+
+.download-app__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+
+  .download-app {
+    background-color: transparent;
+  }
+
+  .download-app__wrapper {
+    width: 300px;
+    margin: 0;
+    padding-top: 202px;
+    padding-bottom: 110px;
+  }
+
+  .download-app__slogan {
+    margin: 0;
+    padding: 0 30px;
+    margin-bottom: 30px;
+
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .download-app__button {
+    margin-bottom: 42px;
+  }
+
+  .download-app__icons-wrapper {
+    padding: 0 40px;
+    margin-bottom: 35px;
+  }
+
+  .download-app__description {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .download-app__wrapper {
+    width: 300px;
+    margin: 0;
+    padding: 0 10px;
+    padding-top: 220px;
+    padding-bottom: 122px;
+  }
+
+  .download-app__slogan {
+    margin: 0;
+    padding: 0 30px;
+    margin-bottom: 50px;
+
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .download-app__button {
+    margin-bottom: 63px;
+
+    font-size: 21px;
+  }
+
+  .download-app__icons-wrapper {
+    margin-bottom: 55px;
+  }
+}

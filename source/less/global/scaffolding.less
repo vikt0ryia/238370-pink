@@ -1,45 +1,24 @@
 body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
   font-size: @base-font-size;
   line-height: @base-line-height;
   font-family: @base-font-family;
-  color: @text-color;
   font-style: normal;
-  background-color: @white;
+  font-weight: 400;
+  color: @base-text-color;
 
-  @media (min-width: @tablet-widths) {
-    font-size: @base-font-size-tablet;
+  background-color: #ffffff;
+
+  @media (min-width: @desktop-width) {
+    font-size: @base-font-size-desktop;
+    line-height: @base-line-height-desktop;
   }
 }
 
-h2 {
-  font-size: @title-font-size;
-  line-height: @base-line-height;
-  font-weight: bold;
-  color: @black;
-
-  @media (min-width: @tablet-widths) {
-    font-size: @title-font-size-tablet;
-    line-height: @title-line-height-tablet;
-  }
-
-  @media (min-width: @desktop-widths) {
-    font-size: @title-font-size-desktop;
-    line-height: @title-line-height-desktop;
-  }
-}
-
-h3 {
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: bold;
-  color: @black;
-
-  @media (min-width: @tablet-widths) {
-    font-size: 20px;
-  }
-}
-
-:active, :hover, :focus {
-  outline: 0;
-  outline-offset: 0;
+img {
+  max-width: 100%;
+  height: auto;
 }
