@@ -86,5 +86,67 @@
     font-weight: 400;
     color: @pink;
     text-align: left;
+
+    &:hover {
+      color: @base-text-color;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .research {
+    background-color: @bg-lightgrey;
+  }
+
+  .research__wrapper {
+    padding-top: 157px;
+    padding-bottom: 110px;
+
+    &::before {
+      top: 66px;
+      left: 10px;
+
+      width: 298px;
+      height: 345px;
+    }
+
+    &::after {
+      top: 135px;
+      left: 32px;
+
+      width: 253px;
+      height: 253px;
+
+      font-size: 120px;
+      line-height: 208px;
+
+      border: 17px solid @pink;
+    }
+  }
+
+  .research__list {
+    padding-left: 365px;
+  }
+
+  .research__title {
+    margin-bottom: 20px;
+  }
+
+  .research__description {
+    margin-bottom: 33px;
+    padding-right: 50px;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .research__link {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

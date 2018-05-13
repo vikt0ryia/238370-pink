@@ -197,3 +197,58 @@
     display: none;
   }
 }
+
+@media (min-width: @desktop-width) {
+
+  .price-table {
+    width: 940px;
+  }
+
+  .price-table__header {
+    padding-top: 14px;
+    padding-bottom: 21px;
+  }
+
+  .price-table__title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .price-table__cost {
+    font-size: 24px;
+  }
+
+  .price-table__header--hit {
+
+    &::before {
+      top: -2px;
+      left: 0;
+
+      width: 74px;
+      height: 73px;
+
+      background-image: url("../img/bg-hit.svg");
+      background-size: contain;
+    }
+
+    &::after {
+      top: 4px;
+      left: 1px;
+
+      width: 74px;
+      height: 73px;
+
+      font-size: 14px;
+      line-height: 30px;
+    }
+  }
+
+  .price-table__property {
+    height: 61px;
+
+    &--mobile {
+      padding-left: 21px;
+      font-size: 18px;
+    }
+  }
+}

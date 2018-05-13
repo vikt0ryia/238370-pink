@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -12,7 +13,7 @@
         <div class="main-nav__wrapper">
           <a class="main-nav__logo">
             <picture>
-              <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+              <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
               <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
               <img class="main-nav__logo-image" src="img/logo-pink-white-mobile.svg" width="74.426" height="22.859" alt="Приложение «Пинк»">
             </picture>
@@ -20,7 +21,7 @@
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a class="main-nav__link" href="">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link  main-nav__link--active" href="">Главная</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
@@ -115,6 +116,10 @@
             <button class="slider__toggle" type="button"><span class="visually-hidden">Отзыв 2</span></button>
             <button class="slider__toggle" type="button"><span class="visually-hidden">Отзыв 3</span></button>
           </p>
+          <p class="reviews__arrows  slider__arrows">
+            <button class="slider__arrow  slider__arrow--left" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
+            <button class="slider__arrow  slider__arrow--right" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
+          </p>
         </div>
       </section>
 
@@ -163,34 +168,64 @@
             <button class="price-table__toggle  slider__toggle" type="button"><span class="visually-hidden">Пакет 3</span></button>
           </p>
         </div>
-    </section>
+      </section>
 
-    <section class="contacts">
-      <h2 class="contacts__title  wrapper">Остались вопросы? Свяжитесь с нами!</h2>
-      <div class="contacts__wrapper  wrapper">
-        <div class="contacts__content">
-          <h3 class="contacts__subtitle">Звоните:</h3>
-          <p class="contacts__item"><a href="tel:+78125556666">+7 (812) 555-66-66</a></p>
+      <section class="contacts">
+        <h2 class="contacts__title  wrapper">Остались вопросы? Свяжитесь с нами!</h2>
+        <div class="contacts__wrapper  wrapper">
+          <div class="contacts__content">
+            <h3 class="contacts__subtitle">Звоните:</h3>
+            <p class="contacts__item"><a href="tel:+78125556666">+7 (812) 555-66-66</a></p>
+          </div>
+          <div class="contacts__content">
+            <h3 class="contacts__subtitle">Пишите:</h3>
+            <p class="contacts__item"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+          </div>
+          <div class="contacts__content">
+            <h3 class="contacts__subtitle">Приезжайте в гости:</h3>
+            <p class="contacts__item">ул. Большая Конюшенная, 19/8</p>
+          </div>
         </div>
-        <div class="contacts__content">
-          <h3 class="contacts__subtitle">Пишите:</h3>
-          <p class="contacts__item  contacts__item--write"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-        </div>
-        <div class="contacts__content">
-          <h3 class="contacts__subtitle">Приезжайте в гости:</h3>
-          <p class="contacts__item  contacts__item--last">ул. Большая Конюшенная, 19/8</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="map">
-      <h2 class="visually-hidden">Мы на карте</h2>
-      <div class="map__wrapper">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124025!2d30.32089461614346!3d59.93879686904785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sby!4v1525025652288" width="1200" height="976" allowfullscreen></iframe>
-      </div>
-    </section>
-
+      <section class="map">
+        <h2 class="visually-hidden">Мы на карте</h2>
+        <div class="map__wrapper">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124025!2d30.32089461614346!3d59.93879686904785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sby!4v1525025652288" width="1200" height="976" allowfullscreen></iframe>
+        </div>
+      </section>
     </main>
+
+    <footer class="page-footer  page-footer--index-mobile  wrapper">
+      <a class="page-footer__logo">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img class="main-nav__logo-image" src="img/logo-pink-blue-tablet.svg" width="146.3px" height="40.375px" alt="Логотип «Пинк»">
+        </picture>
+      </a>
+
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твиттер</span></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбук</span></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Мы на Ютьюб</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="page-footer__copyright  copyright">
+        <span class="copyright__text">Разработано</span>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">HTML Academy</span>
+          <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve"><path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z"/></svg>
+        </a>
+      </div>
+    </footer>
 
     <script src="js/script.js"></script>
 
